@@ -28,14 +28,6 @@ O modelo é baseado no paradigma **LPA (Labels, Properties, Relationships)**.
 | **`:HAS_GENRE`** | `Song` | `Genre` | - |
 | **`:HAS_GENRE`** | `Artist` | `Genre` | - |
 
-### Diagrama do Grafo
-
-```mermaid
-graph LR
-    User -->|LISTENED_TO {rating}| Song
-    Song -->|PERFORMED_BY| Artist
-    Song -->|HAS_GENRE| Genre
-    Artist -->|HAS_GENRE| Genre
 
 // Remover restrições e dados existentes para um novo início
 MATCH (n) DETACH DELETE n;
